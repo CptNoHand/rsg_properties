@@ -113,12 +113,12 @@ end)
 -- house menu
 Citizen.CreateThread(function()
     for menu, v in pairs(Config.Houses) do
-        exports['qbr-core']:createPrompt(v.number..'-stash', v.menu, 0xF3830D8E, 'Open Stash', { -- [J]
+        exports['qbr-core']:createPrompt(v.number..'-stash', v.menu, 0xF3830D8E, 'Open Stash', { -- ["J"]
             type = 'client',
             event = 'rsg_properties:client:housestash',
             args = {v.number},
         })
-		exports['qbr-core']:createPrompt(v.number..'-clothing', v.menu, 0xC7B5340A, 'Open Clothing', { -- [ENTER]
+		exports['qbr-core']:createPrompt(v.number..'-clothing', v.menu, 0xC7B5340A, 'Open Outfits', { -- ["ENTER"]
             type = 'client',
             event = 'qbr-clothing:client:openMenu',
             args = {false, 'outfitMenu'},

@@ -38,9 +38,9 @@ AddEventHandler('rsg_properties:server:buyhouse', function(price, id)
 			TriggerEvent("rsg_properties:server:addhousetodb", id, citizenid, cid, price)
 			Player.Functions.SetMetaData("house", id)
 			-- notify player
-			TriggerClientEvent('QBCore:Notify', src, 9, 'you now own this house', 5000, 0, 'inventory_items_mp', 'provision_generic_key.png', 'COLOR_WHITE')
+			TriggerClientEvent('QBCore:Notify', src, 8, 'House Purchased', 5000, 'you now own this house', 'satchel_textures', 'satchel_nav_sell', 'COLOR_WHITE')
 			Wait(5000)
-			TriggerClientEvent('QBCore:Notify', src, 9, 'your keys have been dispatched', 5000, 0, 'inventory_items_mp', 'provision_generic_key.png', 'COLOR_WHITE')
+			TriggerClientEvent('QBCore:Notify', src, 8, 'Keys Dispatched', 5000, 'you should now have the keys', 'inventory_items', 'folder_kit_keychain', 'COLOR_WHITE')
 		else
 			TriggerClientEvent('QBCore:Notify', src, 9, 'you don\'t have enough money in your bank!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 		end
